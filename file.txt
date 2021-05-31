@@ -1,0 +1,7 @@
+print ("Hello world");
+stairs = 5; // my comment
+steps = 10;
+//99pirates = "argh";
+feet = steps * stairs;
+if (feet isequal 50 and steps isnotequal 9) print (feet);
+mycoolidentifier = 10; _
