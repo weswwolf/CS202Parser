@@ -22,8 +22,8 @@ public class Lexer extends Inputter{
      */
     public Lexer()
     {
-        matching_tokens = new LinkedList<TokenType>();
-        generated_tokens = new LinkedList<Token>();
+        matching_tokens = new LinkedList<>(); // TokenType
+        generated_tokens = new LinkedList<>(); // Token
         // add some types of matching tokens
         // a BADMATCH is when invalid identifier syntax is used
         add_token_type("-?[0-9]+[a-zA-Z]+", TokenType.TkType.BADMATCH); // this needs to be checked before operators
@@ -142,7 +142,7 @@ public class Lexer extends Inputter{
         }
     }
 
-    public static class Token {
+    public static class Token extends Node {
         private final TokenType.TkType code; // enumerator for different token types
         private final String value; // the value of the token
 
@@ -196,3 +196,4 @@ public class Lexer extends Inputter{
     }
 
 }
+

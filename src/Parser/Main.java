@@ -42,8 +42,12 @@ public class Main {
         }
          */
 
-        Lexer lex = new Lexer();
-        lex.process_input();
+        //Lexer lex = new Lexer();
+        //lex.process_input();
+
+        Parser parser = new Parser();
+        parser.process_input();
+        parser.parse();
 
 
 

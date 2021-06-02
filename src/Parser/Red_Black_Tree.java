@@ -12,7 +12,7 @@ import javax.swing.*;
 // black aunt -- rotate
 // red aunt -- color flip
 
-public class BST {
+public class Red_Black_Tree {
 
     private class Node
     {
@@ -105,7 +105,7 @@ public class BST {
 
     private Node root;
 
-    BST()
+    Red_Black_Tree()
     {
        root = null;
     }
@@ -234,7 +234,7 @@ public class BST {
                     || !(node.get_parent().get_parent().get_right().red())) // Aunt is black node
             {
                rotate(node); // do a rotation on this node
-                return;
+                //return;
             }
             // the aunt is red
             // we are going to do a color flip
@@ -244,7 +244,7 @@ public class BST {
                 node.get_parent().get_parent().get_right().recolor(false);
                 node.get_parent().get_parent().recolor(true);
                 node.get_parent().recolor(false);
-                return;
+                //return;
             }
             // aunt is grandparent.get_left()
 
@@ -262,7 +262,7 @@ public class BST {
                     || !(node.get_parent().get_parent().get_left().red())) // Aunt is black node
             {
                 rotate(node); // do a rotation on this node
-                return;
+                //return;
             }
             // the aunt is red
             // we are going to do a color flip
@@ -273,7 +273,7 @@ public class BST {
                 node.get_parent().get_parent().get_left().recolor(false);
                 node.get_parent().get_parent().recolor(true);
                 node.get_parent().recolor(false);
-                return;
+                //return;
             }
         }
     }
@@ -294,7 +294,7 @@ public class BST {
                 node.get_parent().recolor(false);
                 if (node.get_parent().get_right() != null)
                     node.get_parent().get_right().recolor(true);
-                return;
+                //return;
             }
             else // the parent is a right child
             {
@@ -303,7 +303,7 @@ public class BST {
                 node.recolor(false);
                 node.get_right().recolor(true);
                 node.get_left().recolor(true);
-                return;
+                //return;
             }
         }
         else // node is right child

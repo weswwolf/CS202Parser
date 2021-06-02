@@ -4,4 +4,4 @@ steps = 10;
 //99pirates = "argh";
 feet = steps * stairs;
 if (feet isequal 50 and steps isnotequal 9) print (feet);
-mycoolidentifier = 10; _
+mycoolidentifier = 10;
